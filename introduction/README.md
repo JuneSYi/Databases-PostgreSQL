@@ -38,4 +38,8 @@
 	- column where values match the values of another tables primary key column
 	- table with primary key is called the reference/parent
 	- table with foreign key is called the child table
-	-
+- Constraints
+	- Unique constraint - ensures only unique values, throws an error if duplicate
+	- Not null constraint - ensures that NULL values cannot be inserted
+	- Check constraint - used to check whether values satisfy a specific boolean expression (e.g. an age column must contain values > 0)
+
