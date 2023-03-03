@@ -26,7 +26,6 @@ CREATE TABLE directors (
 	nationality VARCHAR(20)
 );
 
-SELECT * FROM directors;
 
 -- Actors table
 
@@ -39,4 +38,32 @@ CREATE TABLE ACTORS (
 	date_of_birth DATE
 );
 
-SELECT * FROM actors;
+-- using foreign keyes through reference
+
+CREATE TABLE movies (
+	
+	movie_id SERIAL PRIMARY KEY,
+	movie_name VARCHAR(50) NOT NULL,
+	movie_length INT,
+	movie_lang VARCHAR(20),
+	release_date DATE,
+	age_certificate VARCHAR(5),
+	director_id INT REFERENCES directors (director_id)
+
+);
+
+CREATE TABLE movie_revenues (
+	revenue_id SERIAL PRIMARY KEY,
+	movie_id INT REFERENCES movies (movie_id),
+	domestic_takings NUMERIC(6,2),
+	international_takings NUMERIC(6,2)
+);
+
+-- creating the movies_actors table
+-- junction table, because it relates two other tables together
+
+CREATE TABLE movies_actors (
+	movie_id INT REFERENCES movies (movie_id),
+	actor_id INT REFERENCES actors (actor_id),
+	PRIMARY KEY (movie_id,actor_id)
+);
