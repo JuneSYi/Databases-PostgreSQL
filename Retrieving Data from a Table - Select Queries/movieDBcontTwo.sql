@@ -1,3 +1,8 @@
+/*
+after all data has been added from movieDBcont.sql
+
+*/
+
 SELECT * FROM directors;
 
 SELECT first_name FROM directors;

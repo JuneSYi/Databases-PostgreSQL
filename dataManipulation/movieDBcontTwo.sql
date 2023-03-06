@@ -1,4 +1,0 @@
-/*
-after all data has been added from movieDBcont.sql
-
-*/

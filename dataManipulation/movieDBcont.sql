@@ -1,4 +1,6 @@
-/* 
+/* continuing from movies_database from introduction
+simply, copy and paste all into SQL query tool to add all tables
+
 Insert data into directors table
 */
 
